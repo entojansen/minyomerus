@@ -1,0 +1,15 @@
+log tnt_0\tnt_0.log; mxram 1024; proc tnt_0\tnt_0.tnt; rs 0;
+hold 1000001;
+ratchet: iter 1000 upfactor 4 downfact 4;
+ratchet:;
+drift: iter 100;
+drift:;
+tfuse: rounds 10;
+tfuse:;
+mult 1;
+ratchet;
+drift;
+tfuse;
+bbreak;
+tsave * tnt_0\tnt_0.tre;save;
+quit;

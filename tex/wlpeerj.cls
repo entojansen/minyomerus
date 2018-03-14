@@ -41,8 +41,8 @@
                 labelsep=period,%
                 justification=raggedright]{caption}
                 
-\RequirePackage{natbib}
-\bibliographystyle{apalike}
+\RequirePackage[authoryear]{natbib}
+\bibliographystyle{agsm}
 
 %
 % writeLaTeX logo
@@ -139,7 +139,7 @@
 %
 % article meta data
 %% LLT 18 Aug 2016: no more!
-% \newcommand{\keywords}[1]{\def\@keywords{#1}}
+%\newcommand{\keywords}[1]{\def\@keywords{#1}}
 %% LLT 18 Aug 2016: but need corresponding author
 \newcommand{\corrauthor}[3][]{%
   \def\thecorrauthor{%

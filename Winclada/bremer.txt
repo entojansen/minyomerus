@@ -1,0 +1,10 @@
+p miny.ss;
+p minyomerus.tre;
+out miny.out;
+hold 1001;
+# will not work with 1000 trees, for some weird reason
+sub 20;
+find*;
+bsupport;
+bsupport*;
+out/;
