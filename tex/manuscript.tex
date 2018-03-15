@@ -19,10 +19,20 @@
 \usepackage{xtab}
 \usepackage{dcolumn}
 \usepackage{multirow}
+\usepackage{nameref}
 \newcolumntype{m}[1]{D{.}{~}{#1}}
 \newcommand{\td}{\textdegree~}
 \newcommand{\x}{$\times$~}
 \newcommand{\breakfill}{\dotfill\newline\penalty0\hbox{}\nobreak\dotfill}
+\makeatletter
+\def\ttl@useclass#1#2{%
+  \@ifstar
+    {\ttl@labelfalse\@dblarg{#1{#2}}}
+    {\ttl@labelfalse\@dblarg{#1{#2}}}}
+\makeatother
+\usepackage[counterclockwise]{rotating}
+\graphicspath{{figures/}}
+\extrafloats{50}
 
 \title{Descriptions of four new species of \textit{Minyomerus} Horn, 1876 sec. Jansen \& Franz, 2015 (Coleoptera: Curculionid{\ae}), with notes on their distribution and phylogeny}
 
@@ -52,7 +62,7 @@
 \maketitle
 \thispagestyle{empty}
 
-\section*{Introduction}
+\section*{Introduction}\label{sec:intro}
 	The weevil genus \textit{Minyomerus} Horn, 1876 [JF2015] is currently assigned to the tribe Tanymecini Lacordaire, 1863 [non-focal], subtribe Tanymecina Lacoirdaire, 1863 [non-focal] (Curculionid{\ae} [non-focal]: Entimin{\ae} [non-focal] - higher-level classification in accordance with \citealt{alonso1999} and \citealt{bouchard2011}). 
 	A recent phylogenetic revision of the genus recognized a total of 17 described species distributed throughout the desert and plains regions of North America \citep{jansen2015}.
 	
@@ -89,7 +99,7 @@
 	\end{enumerate}
 	
 	Following the publication of a monographic revision of \textit{Minyomerus} [JF2015], we have discovered four additional undescribed species, known to us only from limited numbers of specimens, yet well circumscribed by the generic delimitation of the genus.
-	As such, the addition of these new species \emph{does not} alter the definition of the genus (see Phylogenetic results), and we retain the taxonomic concept previously specified by \citet{jansen2015} when referring to this definition.
+	As such, the addition of these new species \emph{does not} alter the definition of the genus (see \textbf{\nameref{sec:results}}), and we retain the taxonomic concept previously specified by \citet{jansen2015} when referring to this definition.
 	For ease of legibility, especially when discussing differences in clade composition when comparing between this and previous work, we use the notation [JF2015] and [JF2018] to specify taxon concepts sec. Jansen \& Franz, 2015 and sec. Jansen \& Franz, 2018, respectively.
 	Specifically, all clades inferred in this work will be designated according to the concept [JF2018], \emph{unless} there is perfect congruence (viz. synapomorphies and clade composition) with a clade previously resolved by \citet{jansen2015}, in which case the identifier [JF2015] will be retained.
 	While this is the case for all of the previously described species, and a few select clades, we differentiate the newly inferred clade corresponding to the genus, and including the herein described species, as \textit{Minyomerus} [JF2018].
@@ -100,12 +110,12 @@
 	Where possible, we make note of host-plant records and briefly consider the geographic distribution of the herein described species.
 	A more extensive discussion of the habits, distribution, and delimitation of the genus (and all of its constituent species) can found in the generic revision \citep{jansen2015}.
 	
-\section*{Materials and methods}
+\section*{Materials and Methods}\label{sec:methods} 
 	In order to maximize the compatibility of the new species accounts with the higher-level generic account of \textit{Minyomerus} [JF2015], the methods used in this manuscript are aligned with those of \citet{jansen2015}.
 	Here we provide an updated account of the procedures used to generate the species descriptions, distribution maps, and phylogeny herein.
 	Most importantly, we retain the format of the species descriptions, whereby we emphasize only those characters that vary significantly from the generic description, as explained below.
 
-	\subsection*{Acquisition of museum specimens} 
+	\subsection*{Acquisition of museum specimens}\label{ssec:museum} 
 		The existing set of \textit{Minyomerus} [JF2015] specimens used in the revision of \citet{jansen2015} was supplemented with material from the following collections, using the codens of \citet{arnett1993}:
 		
 		\begin{description}[itemsep=-1ex]
@@ -117,7 +127,7 @@
 			Georeferencing of localities was performed with Google Earth \citep{google2018} and reported in decimal degrees.
 		Taxonomic names for associated host plants, as noted following each species account, are used in accordance with \citet{munz1973} and \citet{seinet2018}.
 		
-	\subsection*{Morphological analysis}
+	\subsection*{Morphological analysis}\label{ssec:morph} 
 		Our systematic and descriptive approach is complementary to \citet{jansen2015}, which in turn follows \citet{franz2010a, franz2010b, franz2012}.
 		Terminology for exterior morphology is in general accordance with \citet{torre1989}.
 		Additional morphological terms specific to (entimine [non-focal]) weevils were used as follows:
@@ -141,7 +151,7 @@
 		The key to identifying species of \textit{Minyomerus} [JF2015] is arranged with emphasis being placed on the most readily observable diagnostic characters.
 				This manuscript is arranged with the species descriptions appearing first, followed by the key to species, and then by the phylogenetic results.
 		
-	\subsection*{Phylogenetic analysis}
+	\subsection*{Phylogenetic analysis}\label{ssec:phylo} 
 		The morphological cladistic analysis includes 26 terminal taxa; with 21 ingroup and 5 outgroup terminals.
 		The ingroup terminals were represented by 17 species previously assigned to \textit{Minyomerus} [JF2015] and four newly recognized species.
 		In keeping with our previous analysis, we sampled outgroups fairly broadly while remaining focused on North American lineages that are putative close relatives of the ingroup \citep{jansen2015, nixon1993}.
@@ -183,8 +193,8 @@
 		Whereas the Bremer support value is as large as the number of characters supporting the node, in excess of the contradicting characters, the relative fit difference can only vary from 0 to 100, as a proportion of the number of supporting characters.
 		By providing both measures, one may quickly discriminate, for example, between a node supported by 4 characters but contradicted by 1 character (bsv = 3, rfd = 75), and a node supported by 10 characters but contradicted by 7 characters (bsv = 3, rfd = 30).
 	
-	\subsection*{Species distribution modeling}
-		We used the modeling program Maxent, Version 3.4, to generate habitat models for the species of Minyomerus [JF2015] (Figs.~\#) based on documented occurrence records \citep{phillips2004, phillips2006, elith2011}.
+	\subsection*{Species distribution modeling}\label{ssec:dismo} 
+		We used the modeling program Maxent, Version 3.4, to generate habitat models for the species of Minyomerus [JF2015] (Figs.~\ref{fig:map_summary}-\ref{fig:map_sculptilis}) based on documented occurrence records \citep{phillips2004, phillips2006, elith2011}.
 		The default settings were adjusted to \texttt{Max number background points = 100,000} and \texttt{Iterations = 10}.
 		Cross-validation was used to leverage all available locality data; however, no models could be created for species with two or fewer documented localities.
 		We selected 19 bioclimatic variables and elevation as Environmental Layers in Maxent, obtained from WorldClim \citep{hijmans2005}.
@@ -196,10 +206,11 @@
 		Pixels with a value below 0.50 were rendered transparent so that the maps only show regions with a greater than 50\% chance of successful prediction.
 		The raster files were clipped to remove extraneous predicted regions based on: (1) predictive probability (i.e., removing large areas with only transparent pixels) and (2) geographic extent (accounting for endemicity).
 		For example, a species endemic to the Snake River Valley of Idaho does not require a predictive model for bioclimatically similar habitats in the Chihuahuan Desert.
-		Documented occurrence records are laid over the modeled habitat ranges as colored circles on their respective maps (Figs.~\#), along with vector layers of country (white) and state (gray) borders \citep{hijmans2012}.
+		Documented occurrence records are laid over the modeled habitat ranges as colored circles on their respective maps (Figs.~\ref{fig:map_amptyl}-\ref{fig:map_sculptilis}), along with vector layers of country (white) and state (gray) borders \citep{hijmans2012}.
 		
-\section*{Descriptions of new species}
-	\subsection*{\textit{Minyomerus ampullaceus} Jansen \& Franz sec. Jansen \& Franz, 2018; sp. n.}
+\section*{Descriptions of New Species}\label{sec:nsp} 
+	\subsection*{\textit{Minyomerus ampullaceus} Jansen \& Franz sec. Jansen \& Franz, 2018; sp. n.}\label{ssec:amp}
+		Figures~\ref{fig:ampullaceus_F_dorsal}-\ref{fig:ampullaceus_lamina}
 		\subsubsection*{Diagnosis}
 			\textit{Minyomerus ampullaceus} is best differentiated from other congenerics by its unique body shape, which most prominently features a strongly constricted, sub-cylindrical pronotum and greatly protuberant elytra; this combination gives the species a distinctly flask- or bottle-shaped appearance.
 			Due to the relatively poor condition of the scales and set{\ae} of the holotype, color and setation cannot be reliably used for identification.
@@ -270,14 +281,15 @@
 			\paragraph{Holotype}
 				\female~``Carlsbad, N.M.; Geococcyx calif; 144640'' (\texttt{\textbf{USNM}}).
 		\subsubsection*{Distribution}
-			This species is known only from Carlsbad, New Mexico (USA), from an unspecified locality; the location of the city is shown in Fig.~\#.
+			This species is known only from Carlsbad, New Mexico (USA), from an unspecified locality; the location of the city is shown in Fig.~\ref{fig:map_amptyl}.
 		\subsubsection*{Natural history}
 			No host plant associations have been documented.
 			The label indicates ``Geococcyx calif''; this is presumably a reference to \textit{Geococcyx californianus} (Lesson, 1829 [non-focal]; Cuculid{\ae} [non-focal]), the Greater Roadrunner, although it is unclear if the specimen was found on or near one of these birds (either living, dead, or in a nest).
 			\textit{Minyomerus} species are only known to be phytophagous, not parasitic, phoretic, or necrophagous, so we believe that this specimen was most likely found in a nest, and was present there only incidentally because the nest was constructed in the host plant of this specimen \citep{jansen2015}.
 			It is unknown whether this species is parthenogenetic.
 			
-	\subsection*{\textit{Minyomerus franko} Jansen \& Franz sec. Jansen \& Franz, 2018; sp. n.}
+	\subsection*{\textit{Minyomerus franko} Jansen \& Franz sec. Jansen \& Franz, 2018; sp. n.}\label{ssec:franko}
+		Figures~\ref{fig:franko_F_dorsal}-\ref{fig:franko_aedeagus_lateral}
 		\subsubsection*{Diagnosis}
 			\textit{Minyomerus franko} is readily distinguished from other congenerics by the strikingly long set{\ae} of the anterior margin of the pronotum, which project laterally up to 80\td from the longitudinal axis of the body and achieve a maximum length at least equaling the diameter of the eye.
 			In addition, the set{\ae} lining the dorsal margin of the ocular impression are elongate and reach a length equal to 1/2 - 3/4\x the diameter of the eye.
@@ -380,11 +392,12 @@ region, set{\ae} covering 2/3 of dorsal surface area; dorsally with 7 apicomesal
 				``9 mi east Santo; Domingo, S.L.P.,; Mexico~~~XI-14-68; Veryl V. Board'' (\texttt{\textbf{TAMU}}: 2 \male).
 		\subsubsection*{Distribution}
 			This species has been found in San Luis Potos\'{i} and Tamaulipas (M\'{e}xico).
-			It is likely to be found throughout the Chihuahuan Desert and arid regions of south-central M\'{e}xico based on habitat similarity (Fig.~\#).
+			It is likely to be found throughout the Chihuahuan Desert and arid regions of south-central M\'{e}xico based on habitat similarity (Fig.~\ref{fig:map_franko}).
 		\subsubsection*{Natural history}
 			Associated with spear globemallow (\textit{Sph{\ae}ralcea hastulata} A. Gray [non-focal]; Malvace{\ae} [non-focal]).
 
-	\subsection*{\textit{Minyomerus sculptilis} Jansen \& Franz sec. Jansen \& Franz, 2018; sp. n.}
+	\subsection*{\textit{Minyomerus sculptilis} Jansen \& Franz sec. Jansen \& Franz, 2018; sp. n.}\label{ssec:sculpt}
+		Figures~\ref{fig:sculptilis_F_dorsal}-\ref{fig:sculptilis_aedeagus_lateral}
 		\subsubsection*{Diagnosis}
 			\textit{Minyomerus sculptilis} is best distinguished from other congenerics, especially \textit{Minyomerus imberbus} Jansen \& Franz, 2015 [JF2015], by a combination of characters, as follows.
 			The interspersed set{\ae} on the body are linear and either brown or white.
@@ -478,11 +491,12 @@ region, set{\ae} covering 2/3 of dorsal surface area; dorsally with 7 apicomesal
 				``Milner, Idaho; \#5a, 7-9-31; S. pestifer; David E. Fox'' (\texttt{\textbf{USNM}}: 1 \female);
 				``Hazelton, Ida; \#10~~~4/29/30; N. altissma'' (\texttt{\textbf{USNM}}: 1 \male)
 		\subsubsection*{Distribution}
-			This species has been found in three localities along the Snake River in Idaho (USA), and is thought to be endemic to the Snake River Plain (Fig.~\#).
+			This species has been found in three localities along the Snake River in Idaho (USA), and is thought to be endemic to the Snake River Plain (Fig.~\ref{fig:map_sculptilis}).
 		\subsubsection*{Natural history}
 			Associated with big sagebrush (\textit{Artemisia tridentata} Nutt. [non-focal]; Asterace{\ae} [non-focal]), tumbleweed (\textit{Salsola tragus} L. [non-focal]; Amaranthace{\ae} [non-focal]), tall tumblemustard (\textit{Sisymbrium altissimum} L. [non-focal]; Brassicace{\ae} [non-focal]).
 
-	\subsection*{\textit{Minyomerus tylotos} Jansen \& Franz sec. Jansen \& Franz, 2018; sp. n.}
+	\subsection*{\textit{Minyomerus tylotos} Jansen \& Franz sec. Jansen \& Franz, 2018; sp. n.}\label{ssec:tylotos}
+		Figures~\ref{fig:tylotos_F_dorsal}-\ref{fig:tylotos_lamina}
 		\subsubsection*{Diagnosis}
 			\textit{Minyomerus tylotos} is most readily distinguished from other congenerics by a combination of characters, as follows.
 			The nasal plate lacks distinct impressions, having instead a poorly defined anteromesal convexity completely and evenly covered with white scales.
@@ -575,12 +589,12 @@ longer than II.
 				``USA Texas Jeff Davis Co.; 4.1 mi. S. Fort Davis; sweeping grasses-weeds; 4750' . 19.VII.82; R.S. Anderson'' (\texttt{\textbf{CMNC}}: 1 \female)
 		\subsubsection*{Distribution}
 			This species has been found in three localities near the Davis Mountains in Jeff Davis County and in nearby Presidio County, Texas (USA).
-			Habitat models (Figs.~\#) predict that this represents the northeastern extent of its range, indicating a strong likelihood that it is present in other parts of the northern Chihuahuan desert, especially in the state of Chihuahua (M\'{e}xico).
+			Habitat models (Figs.~\ref{fig:map_amptyl}) predict that this represents the northeastern extent of its range, indicating a strong likelihood that it is present in other parts of the northern Chihuahuan desert, especially in the state of Chihuahua (M\'{e}xico).
 		\subsubsection*{Natural history}
 			No host plant associations have been documented.
 			It is unknown whether this species is parthenogenetic.
 			
-\section*{Checklist of species}
+\section*{Checklist of Species}\label{sec:checklist}
 	\begin{tabbing}
 		\quad \= \quad \= = \= \kill
 		\textit{Minyomerus} Horn, 1876: 17\\
@@ -631,7 +645,7 @@ longer than II.
 			\> \textit{tylotos} \textbf{sp. nov.}\\
 	\end{tabbing}
 	
-\section*{Identification key}
+\section*{Identification Key}\label{sec:idkey}
 	\begin{xtabular}{@{}
                 p{\dimexpr.1\textwidth-\tabcolsep\relax}
                 p{\dimexpr.9\textwidth-\tabcolsep\relax}@{}}
@@ -699,15 +713,15 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 		{--} & {Elytra with easily visible, linear set{\ae}; lateral faces of elytra with intervals raised; ramus of spermatheca bulbous, basally tapered, and similar in width to corpus, cornu strongly recurved, but short in basal half with uniquely sinuate appearance, both corpus and cornu with hood-like projections longer than ramus; {\ae}deagal pedon narrow and cylindrical, apically tapered}{\breakfill}{\textbf{\textit{Minyomerus sculptilis} [JF2018], sp. n.}}\\
 	\end{xtabular}
 	
-\section*{Phylogenetic results}
-	A matrix of 52 characters was assembled for the 26 terminal taxa (Tab. 1).
+\section*{Phylogenetic Results}\label{sec:results}
+	A matrix of 52 characters was assembled for the 26 terminal taxa (Tab.~\ref{tab:table1}).
 	These characters are comprised of all 46 characters included in the revision of \textit{Minyomerus} [JF2015], plus an additional 6 characters intended to identify putative sister taxa to the newly described species.
 	Parsimony analysis returned a single, most-parsimonious cladogram (henceforth MPT) with a length (L) of 99 steps, a consistency index (CI) of 60 and a retention index (RI) of 80 \citep{farris1989}.
 	TNT (Tree Analysis Using New Technology) was used to confirm that the shortest tree had been found \citep{goloboff2008}.
-	The most-parsimonious cladogram is shown in Fig.~\#, with relative and absolute Bremer support values (see also \# Methods: Phylogenetic analysis) mapped along the left side of each branch; nodes with bootstrap support above 0.95 are marked with a ``*'' symbol to the right of each node.
+	The most-parsimonious cladogram is shown in Fig.~\ref{fig:tree}, with relative and absolute Bremer support values (see also \textbf{\nameref{sec:methods}: \nameref{ssec:phylo}}) mapped along the left side of each branch; nodes with bootstrap support above 0.95 are marked with a ``*'' symbol to the right of each node.
 	
 	The characters, states, and preferred optimizations are described in this section.
-	Characters relating to placement of the herein described taxa are discussed in detail in the Discussion (\#) section, along with changes in species group composition and tree topology from \citet{jansen2015}.
+	Characters relating to placement of the herein described taxa are discussed in detail in the \textbf{\nameref{sec:disc}} section, along with changes in species group composition and tree topology from \citet{jansen2015}.
 	 For all characters not resolved as unreversed synapomorphies, both the individual consistency (ci) and retention (ri) indices are provided.
 	Characters are numbered in accordance with descriptive sequence used in the species accounts.
 	A ``–'' symbol indicates inapplicable (character, state), whereas a ``?'' symbol indicates missing information, e.g., due to the unavailability of male specimens or insufficient specimens on hand to permit full dissections.
@@ -716,7 +730,7 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 	\begin{table}[h!]
   	\begin{center}
     	\caption{\textbf{Taxon/character matrix used for for cladistic analysis}. Includes all species of \textit{Minyomerus} [JF2015], newly designated species, and select outgroup taxa. All multistate characters coded as additive, except for character 33. The symbol ``–'' denotes inapplicable character states, whereas ``?'' denotes missing information (see also text).}
-    	\label{tab::table1}
+    	\label{tab:table1}
     	\ttfamily
     	\footnotesize
     	\begin{tabular}{m{11.10}|l}
@@ -863,9 +877,9 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 		\item Male terminalia, width of connection between apodemes of {\ae}deagal tegmen: (0) wider than base of apodeme; (1) narrower than base of apodeme. Synapomorphy for the \textit{M. ampullaceus} – \textit{M. politus} clade [JF2018] , with a single reversal in the \textit{M. griseus} – \textit{M. rutellirostris clade} [JF2018] (ci = 50; ri = 83).
 	\end{enumerate}
 
-\section*{Discussion}
-	\subsection*{Parallels with prior work}
-		The most-parsimonious cladogram of this work (Fig.~\#) exhibits important differences compared to that of \citet{jansen2015} with respect relationships between species groups, in large part due to the unique character combinations present in the newly-added taxa (need citation \#).
+\section*{Discussion}\label{sec:disc}
+	\subsection*{Parallels with prior work}\label{ssec:same}
+		The most-parsimonious cladogram of this work (Fig.~\ref{fig:tree}) exhibits important differences compared to that of \citet{jansen2015} with respect relationships between species groups, in large part due to the unique character combinations present in the newly-added taxa \citep{rieppel2007, franz2014}.
 		Nonetheless, we resolve three key clades with strong support, also inferred by and in corroboration with \citet{jansen2015}, as follows:
 		\begin{enumerate}
 			\item The genus \textit{Minyomerus} [JF2018] is well-supported by the same eight synapomorphies identified by \citet{jansen2015}, as specified in the Introduction of this manuscript (Bremer support value [henceforth: bsv] = 10, relative fit difference [henceforth: rfd] = 95; Bootstrap [henceforth: boot] = 100).
@@ -873,12 +887,12 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 			\item The genus \textit{Minyomerus} [JF2018] is nested within a well-supported clade of Tanymecini [non-focal] (boot = 100). However we note, in agreement with \citet{jansen2015}, that significant further work is needed to assess the phylogenetic relationships between all genera presently assigned to the Tanymecini [non-focal] \citep{alonso1999}.
 		\end{enumerate}
 	
-	\subsection*{Intrageneric relationships}
+	\subsection*{Intrageneric relationships}\label{ssec:diff}
 		While some species groups inferred by \citet{jansen2015} remain intact, but with different character alignment, internal topology, or their placement within the genus, others are entirely different; we identify these major topological and compositional phylogenetic differences here.
 		
 		Within \textit{Minyomerus} [JF2018], and beginning at the basal-most node and proceeding nodewise apically, the first major incongruence with \textit{Minyomerus} [JF2015] is the placement of \textit{M. imberbus} [JF2015]. 
 		This species was sister to the \textit{M. constrictus} - \textit{M. laticeps} [JF2015] clade (corresponding to ``\textit{Elissa}'' sec. Casey (1888), but see \citealt{jansen2015}), forming a clade sister to the \textit{M. conicollis} - \textit{M. rutellirostriss} clade [JF2015].
-		By contrast, the present analysis places \textit{M. imberbus} [JF2015] in a clade with \textit{M. sculptilis} [JF2015] (see also \# below), sister to \textit{M. conicollis} - \textit{M. politus} [JF2018] clade.
+		By contrast, the present analysis places \textit{M. imberbus} [JF2015] in a clade with \textit{M. sculptilis} [JF2015] (see below: \textbf{\nameref{ssec:place}}), sister to \textit{M. conicollis} - \textit{M. politus} [JF2018] clade.
 		The inferred \textit{M. imberbus} - \textit{M. politus} [JF2018] clade (bsf = 2, rfd = 50) is supported by three synapomorphies: (1) presence of a transverse constriction across the posterior of the frons (char 16: 1); (2) presence of a reduced tuft of post-ocular vibriss{\ae} (char. 21: 1); and (3) a mesally obscure lamina of the spiculum ventrale in the female (char. 35: 1).
 		
 		The MPT of the current analysis is thereafter topologically identical to that of \citet{jansen2015} until the \textit{M. cracens} - \textit{M. politus} [JF2018] clade, and the \textit{M. ampullaceus} - \textit{M. politus} clade, which correspond compositionally and topologically to the \textit{M. {\ae}riballux} - \textit{M. rutellirostris} [JF2015] clade, respectively.
@@ -891,10 +905,10 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 		The \textit{M. ampullaceus} - \textit{M. politus} [JF2018] clade is supported by a single synapomorphy: the width of the connection between the apodemes of the {\ae}deagal tegmen is narrower than the base of the apodeme (char. 52: 1).
 		Within this clade, the position of the \textit{M. franko} - \textit{M. politus} [JF2018] clade as separate from and sister to the \textit{M. ampullaceus} - \textit{M. reburrus} [JF2018] clade, is supported by a single synapomorphy and a single homoplasious character, namely: (1) presence of an anterior ventral flange on the style of the spiculum gastrale (char. 44: 1, synapomorphy), and (2) differentiation of the set{\ae} on the lateral portion of the elytra and on the venter from the set{\ae} on the elytral disc (char. 3: 1, homoplasy).		
 		
-	\subsection*{Phylogenetic placement of newly described species}
+	\subsection*{Phylogenetic placement of newly described species}\label{ssec:place}
 		The clades within \textit{Minyomerus} [JF2018] not addressed in the preceding section are identical in topology and composition to those of \textit{Minyomerus} [JF2015], except for the addition of newly described species.
 		Here we describe explicitly the phylogenetic placement of these species, and the characters supporting these newly-inferred relationships.
-		We additionally discuss, where possible, similarities in biogeographic extent of each species with putative sister taxa, based on the results of species distribution modeling.
+		We additionally discuss, where possible, similarities in biogeographic extent of each species with putative sister taxa, based on the results of species distribution modeling (see Figs.~\ref{fig:map_summary}-\ref{fig:map_sculptilis}).
 		
 		\subsubsection*{Minyomerus sculptilis \textnormal{\bfseries[JF2018]}}
 			\textit{M. sculptilis} [JF2018] is inferred as sister to \textit{M. imberbus} [JF2015].
@@ -947,18 +961,310 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 
 
 \section*{To Do}
-	\begin{description}[itemsep=-0.4em]
-		\item[Saturday] Insert figures and tables after text, with references, labels, captions, and links in-text.
-		\item[Saturday] Proofread for ligatures, italicizing, sec. notation, spelling, grammar.
-		\item[Saturday] Send to Nico for sec. notation, concept taxonomy, and revisions.
-		\item[Saturday] Insert tables and figures; arrange plates as needed.
-		\item[Monday] Take and insert measurements.
-		\item[Unspec.] Submit names to zoobank.
-		\item[Unspec.] Upload matrix data to dryad.
-		\item[Unspec.] Upload pre-prints to bioR{\textchi}iv.
-	\end{description}
+	\begin{enumerate}[itemsep=-0.4em]
+		\item Insert measurements.
+		\item Submit names to zoobank.
+		\item Upload matrix data to dryad.
+		\item Upload pre-prints to bioR{\textchi}iv.
+	\end{enumerate}
 
 \newpage
 \bibliography{references} 
 %just references in windows, use references.bib in linux
+
+\newpage
+
+%M. ampullaceus
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{ampullaceus_F_dorsal.jpg}
+	\end{sideways}
+	\caption{\textbf{Dorsal habitus of \textit{M. ampullaceus} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:ampullaceus_F_dorsal}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{ampullaceus_F_lateral.jpg}
+	\end{sideways}
+	\caption{\textbf{Lateral habitus of \textit{M. ampullaceus} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:ampullaceus_F_lateral}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{ampullaceus_F_ventral.jpg}
+	\end{sideways}
+	\caption{\textbf{Ventral habitus of \textit{M. ampullaceus} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:ampullaceus_F_ventral}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{ampullaceus_F_frontal.jpg}
+	\caption{\textbf{Head and rostrum of \textit{M. ampullaceus} [JF2018].} Frontal view of female (\female) holotype.}
+	\label{fig:ampullaceus_F_frontal}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{ampullaceus_spermatheca.jpg}
+	\caption{\textbf{Spermatheca of \textit{M. ampullaceus} [JF2018].} Genitalia of female (\female) holotype.}
+	\label{fig:ampullaceus_spermatheca}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{ampullaceus_lamina.jpg}
+	\caption{\textbf{Lamina of spiculum ventrale of \textit{M. ampullaceus} [JF2018].} Sternum VIII of female (\female) holotype.}
+	\label{fig:ampullaceus_lamina}
+\end{figure}
+
+%M. franko
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{franko_F_dorsal.jpg}
+	\end{sideways}
+	\caption{\textbf{Dorsal habitus of \textit{M. franko} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:franko_F_dorsal}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{franko_F_lateral.jpg}
+	\end{sideways}
+	\caption{\textbf{Lateral habitus of \textit{M. franko} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:franko_F_lateral}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{franko_F_ventral.jpg}
+	\end{sideways}
+	\caption{\textbf{Ventral habitus of \textit{M. franko} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:franko_F_ventral}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{franko_F_frontal.jpg}
+	\caption{\textbf{Head and rostrum of \textit{M. franko} [JF2018].} Frontal view of female (\female) holotype.}
+	\label{fig:franko_F_frontal}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{franko_maxilla.jpg}
+	\caption{\textbf{Maxilla of \textit{M. franko} [JF2018].} Dextral maxilla of female (\female) paratype.}
+	\label{fig:franko_maxilla}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{franko_prementum.jpg}
+	\caption{\textbf{Prementum of \textit{M. franko} [JF2018].} Labium of female (\female) paratype.}
+	\label{fig:franko_prementum}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{franko_spermatheca.jpg}
+	\caption{\textbf{Spermatheca of \textit{M. franko} [JF2018].} Genitalia of female (\female) paratype.}
+	\label{fig:franko_spermatheca}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{franko_lamina.jpg}
+	\caption{\textbf{Lamina of spiculum ventrale of \textit{M. franko} [JF2018].} Sternum VIII of female (\female) paratype.}
+	\label{fig:franko_lamina}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{sideways}
+		\includegraphics[width=0.95\textheight]{franko_aedeagus_dorsal.jpg}
+	\end{sideways}
+	\caption{\textbf{Dorsal view of {\ae}deagus of \textit{M. franko} [JF2018].} Genitalia of male (\male) paratype.}
+	\label{fig:franko_aedeagus_dorsal}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{sideways}
+		\includegraphics[width=0.95\textheight]{franko_aedeagus_lateral.jpg}
+	\end{sideways}
+	\caption{\textbf{Lateral view of {\ae}deagus of \textit{M. franko} [JF2018].} Genitalia of male (\male) paratype.}
+	\label{fig:franko_aedeagus_lateral}
+\end{figure}
+
+%M. sculptilis
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{sculptilis_F_dorsal.jpg}
+	\end{sideways}
+	\caption{\textbf{Dorsal habitus of \textit{M. sculptilis} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:sculptilis_F_dorsal}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{sculptilis_F_lateral.jpg}
+	\end{sideways}
+	\caption{\textbf{Lateral habitus of \textit{M. sculptilis} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:sculptilis_F_lateral}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{sculptilis_F_ventral.jpg}
+	\end{sideways}
+	\caption{\textbf{Ventral habitus of \textit{M. sculptilis} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:sculptilis_F_ventral}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{sculptilis_F_frontal.jpg}
+	\caption{\textbf{Head and rostrum of \textit{M. sculptilis} [JF2018].} Frontal view of female (\female) holotype.}
+	\label{fig:sculptilis_F_frontal}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{sculptilis_spermatheca.jpg}
+	\caption{\textbf{Spermatheca of \textit{M. sculptilis} [JF2018].} Genitalia of female (\female) paratype.}
+	\label{fig:sculptilis_spermatheca}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{sculptilis_lamina.jpg}
+	\caption{\textbf{Lamina of spiculum ventrale of \textit{M. sculptilis} [JF2018].} Sternum VIII of female (\female) paratype.}
+	\label{fig:sculptilis_lamina}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{sideways}
+		\includegraphics[width=0.95\textheight]{sculptilis_aedeagus_dorsal.jpg}
+	\end{sideways}
+	\caption{\textbf{Dorsal view of {\ae}deagus of \textit{M. sculptilis} [JF2018].} Genitalia of male (\male) paratype.}
+	\label{fig:sculptilis_aedeagus_dorsal}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{sideways}
+		\includegraphics[width=0.95\textheight]{sculptilis_aedeagus_lateral.jpg}
+	\end{sideways}
+	\caption{\textbf{Lateral view of {\ae}deagus of \textit{M. sculptilis} [JF2018].} Genitalia of male (\male) paratype.}
+	\label{fig:sculptilis_aedeagus_lateral}
+\end{figure}
+
+%M. tylotos
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{tylotos_F_dorsal.jpg}
+	\end{sideways}
+	\caption{\textbf{Dorsal habitus of \textit{M. tylotos} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:tylotos_F_dorsal}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{tylotos_F_lateral.jpg}
+	\end{sideways}
+	\caption{\textbf{Lateral habitus of \textit{M. tylotos} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:tylotos_F_lateral}
+\end{figure}
+
+\begin{figure}[h]
+	\begin{sideways}
+		\centering
+		\includegraphics[height=\textwidth]{tylotos_F_ventral.jpg}
+	\end{sideways}
+	\caption{\textbf{Ventral habitus of \textit{M. tylotos} [JF2018].} Image of female (\female) holotype.}
+	\label{fig:tylotos_F_ventral}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{tylotos_F_frontal.jpg}
+	\caption{\textbf{Head and rostrum of \textit{M. tylotos} [JF2018].} Frontal view of female (\female) holotype.}
+	\label{fig:tylotos_F_frontal}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{tylotos_prementum.jpg}
+	\caption{\textbf{Prementum of \textit{M. tylotos} [JF2018].} Labium of female (\female) paratype.}
+	\label{fig:tylotos_prementum}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{tylotos_spermatheca.jpg}
+	\caption{\textbf{Spermatheca of \textit{M. tylotos} [JF2018].} Genitalia of female (\female) paratype.}
+	\label{fig:tylotos_spermatheca}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{tylotos_lamina.jpg}
+	\caption{\textbf{Lamina of spiculum ventrale of \textit{M. tylotos} [JF2018].} Sternum VIII of female (\female) paratype.}
+	\label{fig:tylotos_lamina}
+\end{figure}
+
+%phylogeny
+\begin{figure}[h]
+	\centering
+	\begin{sideways}
+		\includegraphics[height=0.75\textwidth]{tree.pdf}
+	\end{sideways}
+	\caption{\textbf{Preferred phylogeny.} Single most parsimonious cladogram representing the preferred phylogeny of species of \textit{Minyomerus} [JF2018], and select outgroup taxa (L = 99, CI = 60, RI = 80). Characters 9, 27, 39, 45 - 47, 49, and 51 are mapped under ACCTRAN optimization; all others are unambiguously optimized. Black squares indicate non-homoplasious character state changes, whereas white squares indicate homoplasious character state changes. The numbers above and below the squares represent character numbers and states, respectively. Bremer support (upper value) and relative fit difference (lower value) values can be found at the left ends of the branches. A ``*'' symbol at the right end of a branch indicates Bootstrap support greater than 0.95.}
+	\label{fig:tree}
+\end{figure}
+
+%distribution maps
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{summary.pdf}
+	\caption{\textbf{Summary map of distributions of new species of \textit{Minyomerus} [JF2018].} Combined occurrence record and Maxent habitat modeling map for four newly-described species of \textit{Minyomerus} [JF2018], as indicated in the legend.}
+	\label{fig:map_summary}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{tylotos_ampullaceus.pdf}
+	\caption{\textbf{Distributions of \textit{M. ampullaceus} [JF2018] and \textit{M. tylotos} [JF2018].} Combined occurrence record and Maxent habitat modeling map for \textit{M. ampullaceus} [JF2018] and \textit{M. tylotos} [JF2018], as indicated in the legend.}
+	\label{fig:map_amptyl}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{franko.pdf}
+	\caption{\textbf{Distributions of \textit{M. franko} [JF2018].} Combined occurrence record and Maxent habitat modeling map for \textit{M. franko} [JF2018], as indicated in the legend.}
+	\label{fig:map_franko}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{sideways}
+		\includegraphics[height=0.8\textwidth]{sculptilis.pdf}
+		\end{sideways}
+	\caption{\textbf{Distributions of \textit{M. sculptilis} [JF2018].} Combined occurrence record and Maxent habitat modeling map for \textit{M. sculptilis} [JF2018], as indicated in the legend.}
+	\label{fig:map_sculptilis}
+\end{figure}
 \end{document}
