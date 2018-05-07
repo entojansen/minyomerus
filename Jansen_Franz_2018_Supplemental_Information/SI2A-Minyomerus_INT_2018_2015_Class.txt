@@ -1,0 +1,37 @@
+
+# Input data file - Euler/X software toolkit
+# https://github.com/EulerProject/EulerX
+# Source: Jansen & Franz 2018: Descriptions of four new species of Minyomerus [working title]
+# URL: [...]
+# Supplementary Information. SI2 File Set. "SI2-Minyomerus_INT_2018_2015_Class.txt"
+# Euler/X run commands: euler2 align [name] -r clingo; euler2 show iv; euler2 show pw
+
+taxonomy 2018 JansenFranz
+(Minyomerus Minyomerus_ampullaceus Minyomerus_franko Minyomerus_sculptilis Minyomerus_tylotos nc_Minyomerus)
+
+taxonomy 2015 JansenFranz
+(Minyomerus Minyomerus_aeriballux Minyomerus_bulbifrons Minyomerus_caseyi Minyomerus_conicollis Minyomerus_constrictus Minyomerus_cracens Minyomerus_gravivultus Minyomerus_griseus Minyomerus_imberbus Minyomerus_languidus Minyomerus_laticeps Minyomerus_microps Minyomerus_politus Minyomerus_puticulatus Minyomerus_reburrus Minyomerus_rutellirostris Minyomerus_trisetosus nc_Minyomerus)
+
+articulation 2018_2015 JansenFranz_JansenFranz
+[2018.Minyomerus = 2015.Minyomerus]
+[2018.nc_Minyomerus > 2015.Minyomerus_aeriballux]
+[2018.Minyomerus_ampullaceus < 2015.Minyomerus]
+[2018.nc_Minyomerus > 2015.Minyomerus_bulbifrons]
+[2018.nc_Minyomerus > 2015.Minyomerus_caseyi]
+[2018.nc_Minyomerus > 2015.Minyomerus_conicollis]
+[2018.nc_Minyomerus > 2015.Minyomerus_constrictus]
+[2018.nc_Minyomerus > 2015.Minyomerus_cracens]
+[2018.Minyomerus_franko < 2015.Minyomerus]
+[2018.nc_Minyomerus > 2015.Minyomerus_gravivultus]
+[2018.nc_Minyomerus > 2015.Minyomerus_griseus]
+[2018.nc_Minyomerus > 2015.Minyomerus_imberbus]
+[2018.nc_Minyomerus > 2015.Minyomerus_languidus]
+[2018.nc_Minyomerus > 2015.Minyomerus_laticeps]
+[2018.nc_Minyomerus > 2015.Minyomerus_microps]
+[2018.nc_Minyomerus > 2015.Minyomerus_politus]
+[2018.nc_Minyomerus > 2015.Minyomerus_puticulatus]
+[2018.nc_Minyomerus > 2015.Minyomerus_reburrus]
+[2018.nc_Minyomerus > 2015.Minyomerus_rutellirostris]
+[2018.Minyomerus_sculptilis < 2015.Minyomerus]
+[2018.nc_Minyomerus > 2015.Minyomerus_trisetosus]
+[2018.Minyomerus_tylotos < 2015.Minyomerus]
