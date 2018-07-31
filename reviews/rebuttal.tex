@@ -1,0 +1,210 @@
+\documentclass[10pt,letterpaper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{calc}
+\newcommand{\x}{$\times$~}
+
+\makeatletter
+\newcommand{\DESCRIPTION@original@item}{}
+\let\DESCRIPTION@original@item\item
+\newcommand*{\DESCRIPTION@envir}{DESCRIPTION}
+\newlength{\DESCRIPTION@totalleftmargin}
+\newlength{\DESCRIPTION@linewidth}
+\newcommand{\DESCRIPTION@makelabel}[1]{\llap{#1}}%
+\newcommand{\DESCRIPTION@item}[1][]{%
+  \setlength{\@totalleftmargin}%
+       {\DESCRIPTION@totalleftmargin+\widthof{\textbf{#1 }}-\leftmargin}%
+  \setlength{\linewidth}
+       {\DESCRIPTION@linewidth-\widthof{\textbf{#1 }}+\leftmargin}%
+  \par\parshape \@ne \@totalleftmargin \linewidth
+  \DESCRIPTION@original@item[\textbf{#1}]%
+}
+\newenvironment{DESCRIPTION}
+  {\list{}{\setlength{\labelwidth}{0cm}%
+           \let\makelabel\DESCRIPTION@makelabel}%
+   \setlength{\DESCRIPTION@totalleftmargin}{\@totalleftmargin}%
+   \setlength{\DESCRIPTION@linewidth}{\linewidth}%
+   \renewcommand{\item}{\ifx\@currenvir\DESCRIPTION@envir
+                           \expandafter\DESCRIPTION@item
+                        \else
+                           \expandafter\DESCRIPTION@original@item
+                        \fi}}
+  {\endlist}
+\makeatother
+
+\address{M. Andrew Jansen\\School of Life Sciences\\Arizona State University\\Tempe, AZ 85287-4501} 
+\signature{\underline{Contact Information}\\email: majanse1@asu.edu\\office: 1-(480)-727-9692} 
+\begin{document} 
+\begin{letter}{Juan J. Morrone\\Universidad Nacional Aut\'{o}noma de M\'{e}xico\\Academic Editor, PeerJ} 
+	\opening{Dear Dr. Morrone,} 
+
+	We thank you for a speedy and very constructive review of our manuscript.
+	In our revised resubmission, we have made a great effort to accommodate the suggestions brought up through the review, as outlined point-by-point below (line numbers refer to diff.pdf).
+	The comments of the reviewers may be found at the end of this document for your reference.
+	We sincerely hope that you will find these revisions fitting and satisfactory.
+
+	\begin{enumerate}
+		\item In response to Reviewer 2, we have changed all instances of the word revision (lines 28, 200, 912, and 1077) to read either ``review'' or ``study''.
+		\item In response to Reviewer 2, we did not move the first paragraph and itemized explanation of the taxonomic concept approach to the \textbf{Methods} section of the manuscript; we feel that an upfront explanation of our approach, and especially the meaning of the taxonomic concept labels, is warranted to avoid confusion while reading the introduction.
+		\item In response to Reviewers 2 \& 3, we have italicized the genus name \textit{Minyomerus} in line 210.
+		\item In response to Reviewer 2, we have re-written the \textbf{Natural History} subsection of the description of \textit{Minyomerus ampullaceus} (lines 333--341) to indicate that the specimen most likely came from the gut contents of a roadrunner, rather than a nest, as we had originally thought.
+		\item In response to Reviewer 2, we have added a statement to the \textbf{Natural History} subsection of the description of \textit{Minyomerus tylotos} (lines 467--468) to indicate that the specific epithet of the host plant was misspelled on the label of the holotype.
+		\item In response to Reviewer 3, one of the female \textit{Minyomerus franko} paratypes from the CMNC has been exchanged for a female paratype of \textit{Minyomerus sculptilis} from the USNM (lines 458, 563).
+		\item In response to Reviewer 3, a single space indent was removed from the species entry for \textit{Minyomerus gravivultus} in the \textbf{Checklist of Species}, after line 689.
+		\item In response to Reviewer 3, lines 709--714 were moved to the \textbf{Phylogenetic analysis} subsection of the \textbf{Methods} section (lines 170--175).
+		\item In response to Reviewer 3, we have added a short explanation to the \textbf{Phylogenetic analysis} subsection of the \textbf{Methods} section outlining our general approach to multi-state character coding (lines 175--178).
+		\item In response to Reviewer 3, we have clarified the description of character 6 to read ``Prementum, anterior margin medially with a distinct facet, rather than a single edge edge, that continues to lateral margins'' (lines 740--741).
+		\item In response to Reviewer 3, we have clarified the description of character 28 to read ``Legs, relative length of mesotarsi to mesotibiae: (0) tarsi less than 3/4\x length of tibiae; (1) tarsi at least equal in length to tibiae; (2) tarsi shorter than tibiae, but longer than 3/4\x length of tibiae.'' (lines 821--823).
+		\item In response to Reviewer 3, we have checked again that the species \textit{Minyomerus tylotos} is, in fact, flightless, and found that there are indeed no traces of wings or associated flight structures in our dissected specimens, per the species description.
+		\item In keeping with the submission checklist, we have moved our funding statement from the \textbf{Acknowledgments} section (lines 1079--1081) to a separate \textbf{Funding Statement} section (lines 1099--1102), ending with the sentence: ``There was no additional external funding received for this study.''
+	\end{enumerate}
+
+	Please let us know if these revisions are acceptable.
+	We thank you for your time and consideration, and look forward to next steps.
+
+	\closing{Sincerely,\\Andrew Jansen \& Nico Franz}
+	\cc{Nico M. Franz}
+	%\ps{adding a postscript}
+	\encl{Reviewer comments and annotations}
+	
+	\newpage
+	\textsc{Reviewer Comments \& Annotations}
+	
+	\textbf{Reviewer 1 (Anal\'{i}a Lanteri)}
+	
+	\emph{Basic reporting}
+	
+	The manuscript is written in clear, unambiguous and professional English language. 
+	The main objective of this work is to describe four new species of the weevil genus \textit{Minyomerus} (Curculionidae, Entiminae, Tanymecini), previously revised by the authors of the article, and to integrate the new findings in an updated key and a phylogenetic analysis based on morphological characters.
+	
+	The article is well organized and the structure conforms to PeerJ Standards. 
+	The introduction includes the necessary information and background on the taxon under study. The literature is well referenced and relevant. 
+
+	The taxonomic study was based on a sufficient number of specimens collected by the authors and borrowed from different entomological collections. 
+	The descriptions are very detailed and the structures of diagnostic value are illustrated with very good photographs (dorsal and lateral habitus, mouthparts, sternites VIII of female, spermathecae). 
+	All figures are relevant, high quality and well labeled. The literature is well referenced and relevant.
+
+	\emph{Experimental design}
+	
+	The new species described have been registered in ZooBank, and the information on LSID’s in provided. 
+	A cladistic analysis was performed on a data matrix of 52 morphological characters and 26 terminal taxa (5 outgroups and 21 ingroups), to see the position of the new species in the context of Minyomerus and related genera. The selection of characters and character states was correct. 
+	The most parsimonious tree was found using TNT, and NONA was used for the optimization of the characters. 
+	The tree with the characters optimized was conveniently illustrated. 
+	The cladistics methods are sufficiently detailed and the information given can be replicated.
+	The potential distribution of each new species was assessed applying an ecological modeling approach, using MAXENT, and was shown in maps. 
+
+	The authors adopted the taxonomic concept approach, including the use of taxonomic concept labels and Region Connection Calculus (RCC–5) articulations and alignments.
+	I am not very familiar with this approach and I find it a bit confusing for reading the results, but I understand that the authors are leaders in this matter, not yet commonly used in the taxonomic papers.
+	The details of the RCC–5 alignment are given in free text form in the Supplemental Information, which also describes the content of the data input and output files.
+
+	\newpage
+	\emph{Validity of the findings}
+	
+	The work provides new taxonomic information.
+	The descriptions of the new species are well justified, same as the results of the cladistics analysis.
+	In the discussion, the authors compared the results of the new phylogeny with those previously obtained.
+	They discussed on the intrageneric relationships and the phylogenetic position of each species in a historical-biogeographic context.
+	In find it interesting and not excessively speculative, however, I have some difficulties in following the indication relative to the taxonomic concept approach.
+	
+	Conclusions are well stated, linked to original research question and limited to supporting results.
+	
+	\emph{Comments for the Author}
+	
+	The paper provides new basic taxonomic information, consisting on a description of four new weevil species, rigorously described and illustrated.
+	The phylogenetic placement of these species is analyzed and their geographic ranges are discussed in relation to those of their putative sister taxa, based on the results of a niche modeling analysis.
+	The methods applied are classical and correct.
+	All the figures are appropriate and necessary. 
+
+	In my opinion, the taxonomic concept approach applied in this paper is somewhat confusing, as well as the supplementary information relative to this subject, but I am not an expert on this matter.
+	
+	\emph{Annotated manuscript}
+	
+	An annotated manuscript was not provided.
+	
+	\newpage	
+	\textbf{Reviewer 2 (Robert Anderson)}
+	
+	\emph{Basic reporting}
+	
+	This is a comprehensive, well-written followup to the authors previous paper revising the genus \textit{Minyomerus}.
+	I have made a few minor comments in the text of the manuscript PDF.
+	I am quite sure that the single specimen of \textit{M. ampullaceus} is from the stomach/gut contents of a roadrunner.
+	The USNM was quite active in the mid 1900's in supporting identification of gut contents from various species of birds.
+	I have a new \textit{Phyxelis} from Louisiana known only from USNM specimens from quail stomach contents and the weevil \textit{Glaphyrometopus ornithodorus} was described from a series of USNM specimens from meadowlark stomach contents.
+	As such, the paragraph related to the natural history of this species should be rewritten.
+
+	The phylogenetic work appears to be well supported and discussed with all characters and states well-explained.
+	As the authors know, I am not a fan of the taxonomic concept approach but I can understand the authors rationale for its use.
+	The authors have done a nice job of integrating the 4 new species into the key and phylogeny and presenting these results.
+	
+	\emph{Experimental design}
+	
+	See above.
+	
+	\emph{Validity of the findings}
+	
+	See above.
+	
+	\emph{Comments for the Author}
+	
+	See above.
+	
+	\emph{Annotated manuscript}
+	
+	The reviewer has also provided an annotated manuscript as part of their review:
+	
+	\begin{DESCRIPTION}
+		\item[Line 17:] ``I think review is a better term here.''
+		\item[Lines 28--40:] ``I think this section is best placed in the Methods section.''
+		\item[Line 200:] ``italics''
+		\item[Lines 320--323:] ``I am quite sure this specimen would have been taken from the stomach contents of this species of bird.
+			Over the years the USNM frequently assisted with identifications of stomach contents of various bird species.
+			I know of at least two other weevil species originally known only from the stomachs of meadowlark and quail.
+			Given the specimen condition this fits with this proposal.''
+		\item[Lines 440, 451:] ``Is hastula or hastulata correct...see above under Holotype?''
+	\end{DESCRIPTION}
+	
+	\newpage
+
+	\textbf{Reviewer 3 (Lourdes Chamorro)}
+	
+	\emph{Basic reporting}
+	
+	No comment.
+	
+	\emph{Experimental design}
+	
+	I suggested in the pdf itself that some information may need to be added in the methods section regarding additive/non-additive coding of multistate characters.
+	
+	\emph{Validity of the findings}
+	
+	No comment.
+	
+	\emph{Comments for the Author}
+	
+	This is a thorough study that aims to describe and phylogenetically place 4 new species of \textit{Minyomerus}.
+	The use of occurrence data to predict distribution ranges for each species is a much welcome approach to this type of study.
+	
+	\emph{Annotated manuscript}
+	
+	The reviewer has also provided an annotated manuscript as part of their review:
+	
+	\begin{DESCRIPTION}
+		\item[Line 200:] ``Italics needed.''
+		\item[Line 481:] ``?''
+		\item[Line 546:] ``USNM is willing to donate this specimen to CMNC in exchange for one of the CMNC paratypes of Minyomerus franko.''
+		\item[Line 672:] ``Fix slight indent.''
+		\item[Lines 692--697:] ``Perhaps some or all of this would be better placed under methods.''
+		\item[Table 1:] ``Why coded as additive vs non-additive?
+			Nevermind, I see you expand on this below under each character.
+			Perhaps something alluding to this methodology should be mentioned in the methods.''
+		\item[Line 723:] ``This is rather unclear.''
+		\item[Line 803:] ``This is rather vague, as well as state 2.''
+		\item[Figure 23:] ``Is this species flightless also?
+			It seems to have much more prominent humeri than the other species in the genus.''
+		\item[Figure 35:] ``Excellent!''
+	\end{DESCRIPTION}
+\end{letter} 
+\end{document}
