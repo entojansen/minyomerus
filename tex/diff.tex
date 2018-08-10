@@ -1,7 +1,7 @@
 %% Submissions for peer-review must enable line-numbering 
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL manuscript.tex           Fri May 18 14:53:44 2018
-%DIF ADD revised_manuscript.tex   Wed Aug  1 22:31:44 2018
+%DIF ADD revised_manuscript.tex   Fri Aug 10 01:55:21 2018
 %% using the lineno option in the \documentclass command.
 %%
 %% Preprints and camera-ready submissions do not need 
@@ -261,7 +261,7 @@
 		Pixels with a value below 0.50 were rendered transparent so that the maps only show regions with a greater than 50\% chance of successful prediction.
 		The raster files were clipped to remove extraneous predicted regions based on: (1) predictive probability (i.e., removing large areas with only transparent pixels) and (2) geographic extent (accounting for endemicity).
 		For example, a species endemic to the Snake River Valley of Idaho does not require a predictive model for bioclimatically similar habitats in the Chihuahuan Desert.
-		Documented occurrence records are laid over the modeled habitat ranges as colored circles on their respective maps (Figs.~\ref{fig:map_amptyl}-\ref{fig:map_sculptilis}), along with vector layers of country (white) and state (gray) borders \citep{hijmans2012}.
+		Documented occurrence records are laid over the modeled habitat ranges as colored circles on their respective maps (Figs.~\DIFdelbegin \DIFdel{\ref{fig:map_amptyl}}\DIFdelend \DIFaddbegin \DIFadd{\ref{fig:map_summary}}\DIFaddend -\ref{fig:map_sculptilis}), along with vector layers of country (white) and state (gray) borders \citep{hijmans2012}.
 
 	\subsection*{Nomenclature}
 		The electronic version of this article in Portable Document Format (PDF) will represent a published work according to the International Commission on Zoological Nomenclature (ICZN), and hence the new names contained in the electronic version are effectively published under that Code from the electronic edition alone. 
@@ -1102,12 +1102,6 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 			\item[\texttt{SI4C}] Set of 925 \textit{Maximally Informative Relations} (MIR) for the SI4A input. File format: .csv
 			\item[\texttt{SI4D}] Alignment visualization for the SI4A input. File format: .pdf
 		\end{description}
-\DIFaddbegin 
-
-\section*{\DIFadd{Funding statement}}
-	\DIFadd{This research was funded in part by the National Science Foundation (DEB-1155984) and the United States Department of Agriculture -- Agricultural Research Service (Agreement 58-1275-1-335).
-	There was no additional external funding received for this study.
-}\DIFaddend 
 
 \newpage
 
@@ -1115,53 +1109,120 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 \nocite{*}
 
 \newpage
+%DIF > RCC-5 alignment visualizations
+\DIFaddbegin \begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figure1.png}
+	\caption{\textbf{\DIFaddFL{Intensional RCC--5 alignment of the rank-only classifications of }\textit{\DIFaddFL{Minyomerus}} [\DIFaddFL{JF2018}]\DIFaddFL{/}[\DIFaddFL{JF2015}]\DIFaddFL{.}} \DIFaddFL{See also \mbox{%DIFAUXCMD
+\citet{jansen2015} }\hspace{0pt}%DIFAUXCMD
+and }\textbf{\DIFaddFL{Supplemental Information SI2}}\DIFaddFL{. Taxonomic concept labels such as }\textit{\DIFaddFL{Minymerus microps}} [\DIFaddFL{JF2015}] \DIFaddFL{are abbreviated as "2015.Minyomerus\_microps". Relaxation of the coverage constraint is indicated with the prefix "nc\_" (no coverage). Congruent concept regions (T\textsubscript{2} and T\textsubscript{1}) are shown as grey rectangles, concepts regions unique to the later taxonomy (T\textsubscript{2}) are shown as green rectangles, and concept regions unique to the earlier taxonomy (T\textsubscript{1}) are shown as yellow octagons. Articulations of inverse proper inclusion $(<)$ and overlap $(><)$, where present, are also shown.}}
+	\label{fig:align1}
+\end{figure}
+\DIFaddend 
 
-%M. ampullaceus
+\DIFaddbegin \begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figure2.png}
+	\caption{\textbf{\DIFaddFL{Intensional RCC--5 alignment of the phylogenies of }\textit{\DIFaddFL{Minyomerus}} [\DIFaddFL{JF2018}]\DIFaddFL{/}[\DIFaddFL{JF2015}] \DIFaddFL{-- whole-concept resolution with overlap.}} \DIFaddFL{See also }\textbf{\DIFaddFL{Supplemental Information SI3}}\DIFaddFL{. Seven overlapping articulations are inferred. For further discussion, see the }\textbf{\nameref{sec:alignments}} \DIFaddFL{section.}}
+	\label{fig:align2}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figure3.png}
+	\caption{\textbf{\DIFaddFL{Intensional RCC--5 alignment of the phylogenies of }\textit{\DIFaddFL{Minyomerus}} [\DIFaddFL{JF2018}]\DIFaddFL{/}[\DIFaddFL{JF2015}] \DIFaddFL{-- split-concept resolution.}} \DIFaddFL{See also }\textbf{\DIFaddFL{Supplemental Information SI4}}\DIFaddFL{. The seven overlapping articulations of the alignment displayed Fig.~\ref{fig:align2} are resolved into their constituent split regions. That is, if regions A and B overlap, the three resulting split regions are labeled A\textbackslash b ("A, }\emph{\DIFaddFL{not}} \DIFaddFL{b"), A*B ("A }\emph{\DIFaddFL{and}} \DIFaddFL{B"), and B\textbackslash a ("B, }\emph{\DIFaddFL{not}} \DIFaddFL{a"). Five split-concept regions can }\emph{\DIFaddFL{only}} \DIFaddFL{be named using this convention, and are salmon-colored in the alignment visualization.}}
+	\label{fig:align3}
+\end{figure}
+
+%DIF > distribution maps
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figure4.png}
+	\caption{\textbf{\DIFaddFL{Summary map of distributions of new species of }\textit{\DIFaddFL{Minyomerus}} [\DIFaddFL{JF2018}]\DIFaddFL{.}} \DIFaddFL{Combined occurrence record and Maxent habitat modeling map for four newly-described species of }\textit{\DIFaddFL{Minyomerus}} [\DIFaddFL{JF2018}]\DIFaddFL{, as indicated in the legend.}}
+	\label{fig:map_summary}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figure5.png}
+	\caption{\textbf{\DIFaddFL{Distributions of }\textit{\DIFaddFL{M. ampullaceus}} [\DIFaddFL{JF2018}] \DIFaddFL{and }\textit{\DIFaddFL{M. tylotos}} [\DIFaddFL{JF2018}]\DIFaddFL{.}} \DIFaddFL{Combined occurrence record and Maxent habitat modeling map for }\textit{\DIFaddFL{M. ampullaceus}} [\DIFaddFL{JF2018}] \DIFaddFL{and }\textit{\DIFaddFL{M. tylotos}} [\DIFaddFL{JF2018}]\DIFaddFL{, as indicated in the legend.}}
+	\label{fig:map_amptyl}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figure6.png}
+	\caption{\textbf{\DIFaddFL{Distributions of }\textit{\DIFaddFL{M. franko}} [\DIFaddFL{JF2018}]\DIFaddFL{.}} \DIFaddFL{Combined occurrence record and Maxent habitat modeling map for }\textit{\DIFaddFL{M. franko}} [\DIFaddFL{JF2018}]\DIFaddFL{, as indicated in the legend.}}
+	\label{fig:map_franko}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{sideways}
+		\includegraphics[height=0.85\textwidth]{figure7.png}
+		\end{sideways}
+	\caption{\textbf{\DIFaddFL{Distributions of }\textit{\DIFaddFL{M. sculptilis}} [\DIFaddFL{JF2018}]\DIFaddFL{.}} \DIFaddFL{Combined occurrence record and Maxent habitat modeling map for }\textit{\DIFaddFL{M. sculptilis}} [\DIFaddFL{JF2018}]\DIFaddFL{, as indicated in the legend.}}
+	\label{fig:map_sculptilis}
+\end{figure}
+
+\DIFaddend %M. ampullaceus
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure1.jpg}
-	\end{sideways}
-	\caption{\textbf{Dorsal habitus of \textit{M. ampullaceus} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure1.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure8.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Dorsal habitus of \textit{M. ampullaceus} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:ampullaceus_F_dorsal}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure2.jpg}
-	\end{sideways}
-	\caption{\textbf{Lateral habitus of \textit{M. ampullaceus} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure2.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure9.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Lateral habitus of \textit{M. ampullaceus} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:ampullaceus_F_lateral}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure3.jpg}
-	\end{sideways}
-	\caption{\textbf{Ventral habitus of \textit{M. ampullaceus} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure3.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure10.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Ventral habitus of \textit{M. ampullaceus} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:ampullaceus_F_ventral}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure4.jpg}
-	\caption{\textbf{Head and rostrum of \textit{M. ampullaceus} [JF2018].} Frontal view of female (\female) holotype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure4.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure11.jpg}
+	\DIFaddendFL \caption{\textbf{Head and rostrum of \textit{M. ampullaceus} [JF2018].} Frontal view of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:ampullaceus_F_frontal}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure5.jpg}
-	\caption{\textbf{Spermatheca of \textit{M. ampullaceus} [JF2018].} Genitalia of female (\female) holotype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure5.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure12.jpg}
+	\DIFaddendFL \caption{\textbf{Spermatheca of \textit{M. ampullaceus} [JF2018].} Genitalia of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:ampullaceus_spermatheca}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure6.jpg}
-	\caption{\textbf{Lamina of spiculum ventrale of \textit{M. ampullaceus} [JF2018].} Sternum VIII of female (\female) holotype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure6.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure13.jpg}
+	\DIFaddendFL \caption{\textbf{Lamina of spiculum ventrale of \textit{M. ampullaceus} [JF2018].} Sternum VIII of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:ampullaceus_lamina}
 \end{figure}
 
@@ -1169,71 +1230,89 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure7.jpg}
-	\end{sideways}
-	\caption{\textbf{Dorsal habitus of \textit{M. franko} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure7.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure14.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Dorsal habitus of \textit{M. franko} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:franko_F_dorsal}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure8.jpg}
-	\end{sideways}
-	\caption{\textbf{Lateral habitus of \textit{M. franko} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure8.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure15.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Lateral habitus of \textit{M. franko} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:franko_F_lateral}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure9.jpg}
-	\end{sideways}
-	\caption{\textbf{Ventral habitus of \textit{M. franko} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure9.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure16.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Ventral habitus of \textit{M. franko} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:franko_F_ventral}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure10.jpg}
-	\caption{\textbf{Head and rostrum of \textit{M. franko} [JF2018].} Frontal view of female (\female) holotype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure10.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure17.jpg}
+	\DIFaddendFL \caption{\textbf{Head and rostrum of \textit{M. franko} [JF2018].} Frontal view of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:franko_F_frontal}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure11.jpg}
-	\caption{\textbf{Maxilla of \textit{M. franko} [JF2018].} Dextral maxilla of female (\female) paratype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure11.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure18.jpg}
+	\DIFaddendFL \caption{\textbf{Maxilla of \textit{M. franko} [JF2018].} Dextral maxilla of female (\female) paratype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:franko_maxilla}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure12.jpg}
-	\caption{\textbf{Prementum of \textit{M. franko} [JF2018].} Labium of female (\female) paratype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure12.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure19.jpg}
+	\DIFaddendFL \caption{\textbf{Prementum of \textit{M. franko} [JF2018].} Labium of female (\female) paratype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:franko_prementum}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure13.jpg}
-	\caption{\textbf{Spermatheca of \textit{M. franko} [JF2018].} Genitalia of female (\female) paratype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure13.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure20.jpg}
+	\DIFaddendFL \caption{\textbf{Spermatheca of \textit{M. franko} [JF2018].} Genitalia of female (\female) paratype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:franko_spermatheca}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure14.jpg}
-	\caption{\textbf{Lamina of spiculum ventrale of \textit{M. franko} [JF2018].} Sternum VIII of female (\female) paratype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure14.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure21.jpg}
+	\DIFaddendFL \caption{\textbf{Lamina of spiculum ventrale of \textit{M. franko} [JF2018].} Sternum VIII of female (\female) paratype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:franko_lamina}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\begin{sideways}
-		\includegraphics[width=0.95\textheight]{figure15.jpg}
-	\end{sideways}
-	\caption{\textbf{Aedeagus of \textit{M. franko} [JF2018].} Genitalia of male (\male) paratype in (A) dorsal view and (B) lateral view.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=0.95\textheight]{figure15.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=0.95\textheight]{figure22.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Aedeagus of \textit{M. franko} [JF2018].} Genitalia of male (\male) paratype in (A) dorsal view and (B) lateral view. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:franko_aedeagus}
 \end{figure}
 
@@ -1241,57 +1320,71 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure16.jpg}
-	\end{sideways}
-	\caption{\textbf{Dorsal habitus of \textit{M. sculptilis} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure16.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure23.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Dorsal habitus of \textit{M. sculptilis} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:sculptilis_F_dorsal}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure17.jpg}
-	\end{sideways}
-	\caption{\textbf{Lateral habitus of \textit{M. sculptilis} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure17.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure24.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Lateral habitus of \textit{M. sculptilis} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:sculptilis_F_lateral}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure18.jpg}
-	\end{sideways}
-	\caption{\textbf{Ventral habitus of \textit{M. sculptilis} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure18.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure25.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Ventral habitus of \textit{M. sculptilis} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:sculptilis_F_ventral}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure19.jpg}
-	\caption{\textbf{Head and rostrum of \textit{M. sculptilis} [JF2018].} Frontal view of female (\female) holotype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure19.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure26.jpg}
+	\DIFaddendFL \caption{\textbf{Head and rostrum of \textit{M. sculptilis} [JF2018].} Frontal view of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:sculptilis_F_frontal}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure20.jpg}
-	\caption{\textbf{Spermatheca of \textit{M. sculptilis} [JF2018].} Genitalia of female (\female) paratype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure20.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure27.jpg}
+	\DIFaddendFL \caption{\textbf{Spermatheca of \textit{M. sculptilis} [JF2018].} Genitalia of female (\female) paratype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:sculptilis_spermatheca}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure21.jpg}
-	\caption{\textbf{Lamina of spiculum ventrale of \textit{M. sculptilis} [JF2018].} Sternum VIII of female (\female) paratype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure21.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure28.jpg}
+	\DIFaddendFL \caption{\textbf{Lamina of spiculum ventrale of \textit{M. sculptilis} [JF2018].} Sternum VIII of female (\female) paratype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:sculptilis_lamina}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
 	\begin{sideways}
-		\includegraphics[width=0.95\textheight]{figure22.jpg}
-	\end{sideways}
-	\caption{\textbf{Aedeagus of \textit{M. sculptilis} [JF2018].} Genitalia of male (\male) paratype in (A) dorsal view and (B) lateral view.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=0.95\textheight]{figure22.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=0.95\textheight]{figure29.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Aedeagus of \textit{M. sculptilis} [JF2018].} Genitalia of male (\male) paratype in (A) dorsal view and (B) lateral view. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:sculptilis_aedeagus}
 \end{figure}
 
@@ -1299,55 +1392,69 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure23.jpg}
-	\end{sideways}
-	\caption{\textbf{Dorsal habitus of \textit{M. tylotos} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure23.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure30.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Dorsal habitus of \textit{M. tylotos} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:tylotos_F_dorsal}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure24.jpg}
-	\end{sideways}
-	\caption{\textbf{Lateral habitus of \textit{M. tylotos} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure24.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure31.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Lateral habitus of \textit{M. tylotos} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:tylotos_F_lateral}
 \end{figure}
 
 \begin{figure}[h]
 	\begin{sideways}
 		\centering
-		\includegraphics[height=\textwidth]{figure25.jpg}
-	\end{sideways}
-	\caption{\textbf{Ventral habitus of \textit{M. tylotos} [JF2018].} Image of female (\female) holotype.}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=\textwidth]{figure25.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=\textwidth]{figure32.jpg}
+	\DIFaddendFL \end{sideways}
+	\caption{\textbf{Ventral habitus of \textit{M. tylotos} [JF2018].} Image of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:tylotos_F_ventral}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure26.jpg}
-	\caption{\textbf{Head and rostrum of \textit{M. tylotos} [JF2018].} Frontal view of female (\female) holotype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure26.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure33.jpg}
+	\DIFaddendFL \caption{\textbf{Head and rostrum of \textit{M. tylotos} [JF2018].} Frontal view of female (\female) holotype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:tylotos_F_frontal}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure27.jpg}
-	\caption{\textbf{Prementum of \textit{M. tylotos} [JF2018].} Labium of female (\female) paratype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure27.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure34.jpg}
+	\DIFaddendFL \caption{\textbf{Prementum of \textit{M. tylotos} [JF2018].} Labium of female (\female) paratype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:tylotos_prementum}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure28.jpg}
-	\caption{\textbf{Spermatheca of \textit{M. tylotos} [JF2018].} Genitalia of female (\female) paratype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure28.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure35.jpg}
+	\DIFaddendFL \caption{\textbf{Spermatheca of \textit{M. tylotos} [JF2018].} Genitalia of female (\female) paratype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:tylotos_spermatheca}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{figure29.jpg}
-	\caption{\textbf{Lamina of spiculum ventrale of \textit{M. tylotos} [JF2018].} Sternum VIII of female (\female) paratype.}
+	\DIFdelbeginFL %DIFDELCMD < \includegraphics[width=\textwidth]{figure29.jpg}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[width=\textwidth]{figure36.jpg}
+	\DIFaddendFL \caption{\textbf{Lamina of spiculum ventrale of \textit{M. tylotos} [JF2018].} Sternum VIII of female (\female) paratype. \DIFaddbeginFL \DIFaddFL{Photo credit: Andrew Jansen.}\DIFaddendFL }
 	\label{fig:tylotos_lamina}
 \end{figure}
 
@@ -1355,8 +1462,10 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 \begin{figure}[h]
 	\centering
 	\begin{sideways}
-		\includegraphics[height=0.85\textwidth]{figure30.png}
-	\end{sideways}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=0.85\textwidth]{figure30.png}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=0.85\textwidth]{figure37.png}
+	\DIFaddendFL \end{sideways}
 	\caption{\textbf{Preferred phylogeny -- character transitions and support.} Single most parsimonious cladogram representing the preferred phylogeny of species of \textit{Minyomerus} [JF2018], and select outgroup taxa (L = 99, CI = 60, RI = 80). Characters 9, 27, 39, 45 - 47, 49, and 51 are mapped under ACCTRAN optimization; all others are unambiguously optimized. Black squares indicate non-homoplasious character state changes, whereas white squares indicate homoplasious character state changes. The numbers above and below the squares represent character numbers and states, respectively. Bremer support (upper value) and relative fit difference (lower value) values can be found at the left ends of the branches. A ``*'' symbol at the right end of a branch indicates Bootstrap support greater than 0.95.}
 	\label{fig:tree1}
 \end{figure}
@@ -1365,62 +1474,168 @@ as two subcontiguous, apically invaginated bulbs}{\dotfill}{\textbf{\textit{Miny
 \begin{figure}[h]
 	\centering
 	\begin{sideways}
-		\includegraphics[height=0.85\textwidth]{figure31.png}
-	\end{sideways}
+		\DIFdelbeginFL %DIFDELCMD < \includegraphics[height=0.85\textwidth]{figure31.png}
+%DIFDELCMD < 	%%%
+\DIFdelendFL \DIFaddbeginFL \includegraphics[height=0.85\textwidth]{figure38.png}
+	\DIFaddendFL \end{sideways}
 	\caption{\textbf{Preferred phylogeny -- clade concept labels.} Topology and species-level taxonomic concept labels as in Fig.~\ref{fig:tree1}. Clade concept labels, numbered 1-20, are consistently generated by using the alphabetically first epithet in each of the bifurcating sister clades. This method safeguards the clade concept labels against changes due simply to reorientation of leaves. Bold-font square brackets indicate new [JF2018] labels. See also \textbf{\nameref{sec:alignments}}.}
 	\label{fig:tree2}
-\end{figure}
+\DIFdelbeginFL %DIFDELCMD < \end{figure}
+%DIFDELCMD < 
 
-%RCC-5 alignment visualizations
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{figure32.png}
-	\caption{\textbf{Intensional RCC--5 alignment of the rank-only classifications of \textit{Minyomerus} [JF2018]/[JF2015].} See also \citet{jansen2015} and \textbf{Supplemental Information SI2}. Taxonomic concept labels such as \textit{Minymerus microps} [JF2015] are abbreviated as "2015.Minyomerus\_microps". Relaxation of the coverage constraint is indicated with the prefix "nc\_" (no coverage). Congruent concept regions (T\textsubscript{2} and T\textsubscript{1}) are shown as grey rectangles, concepts regions unique to the later taxonomy (T\textsubscript{2}) are shown as green rectangles, and concept regions unique to the earlier taxonomy (T\textsubscript{1}) are shown as yellow octagons. Articulations of inverse proper inclusion $(<)$ and overlap $(><)$, where present, are also shown.}
-	\label{fig:align1}
-\end{figure}
+%DIFDELCMD < %%%
+%DIF < RCC-5 alignment visualizations
+%DIFDELCMD < \begin{figure}[h]
+%DIFDELCMD < 	\centering
+%DIFDELCMD < 	\includegraphics[width=\textwidth]{figure32.png}
+%DIFDELCMD < 	%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\textbf{\DIFdelFL{Intensional RCC--5 alignment of the rank-only classifications of }\textit{\DIFdelFL{Minyomerus}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{/}%DIFDELCMD < [%%%
+\DIFdelFL{JF2015}%DIFDELCMD < ]%%%
+\DIFdelFL{.}} %DIFAUXCMD
+\DIFdelFL{See also \mbox{%DIFAUXCMD
+\citet{jansen2015} }\hspace{0pt}%DIFAUXCMD
+and }\textbf{\DIFdelFL{Supplemental Information SI2}}%DIFAUXCMD
+\DIFdelFL{. Taxonomic concept labels such as }\textit{\DIFdelFL{Minymerus microps}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2015}%DIFDELCMD < ] %%%
+\DIFdelFL{are abbreviated as "2015.Minyomerus\_microps". Relaxation of the coverage constraint is indicated with the prefix "nc\_" (no coverage). Congruent concept regions (T\textsubscript{2} and T\textsubscript{1}) are shown as grey rectangles, concepts regions unique to the later taxonomy (T\textsubscript{2}) are shown as green rectangles, and concept regions unique to the earlier taxonomy (T\textsubscript{1}) are shown as yellow octagons. Articulations of inverse proper inclusion $(<)$ and overlap $(><)$, where present, are also shown.}}
+	%DIFAUXCMD
+%DIFDELCMD < \label{fig:align1}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < 
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{figure33.png}
-	\caption{\textbf{Intensional RCC--5 alignment of the phylogenies of \textit{Minyomerus} [JF2018]/[JF2015] -- whole-concept resolution with overlap.} See also \textbf{Supplemental Information SI3}. Seven overlapping articulations are inferred. For further discussion, see the \textbf{\nameref{sec:alignments}} section.}
-	\label{fig:align2}
-\end{figure}
+%DIFDELCMD < \begin{figure}[h]
+%DIFDELCMD < 	\centering
+%DIFDELCMD < 	\includegraphics[width=\textwidth]{figure33.png}
+%DIFDELCMD < 	%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\textbf{\DIFdelFL{Intensional RCC--5 alignment of the phylogenies of }\textit{\DIFdelFL{Minyomerus}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{/}%DIFDELCMD < [%%%
+\DIFdelFL{JF2015}%DIFDELCMD < ] %%%
+\DIFdelFL{-- whole-concept resolution with overlap.}} %DIFAUXCMD
+\DIFdelFL{See also }\textbf{\DIFdelFL{Supplemental Information SI3}}%DIFAUXCMD
+\DIFdelFL{. Seven overlapping articulations are inferred. For further discussion, see the }\textbf{%DIFDELCMD < \nameref{sec:alignments}%%%
+} %DIFAUXCMD
+\DIFdelFL{section.}}
+	%DIFAUXCMD
+%DIFDELCMD < \label{fig:align2}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < 
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{figure34.png}
-	\caption{\textbf{Intensional RCC--5 alignment of the phylogenies of \textit{Minyomerus} [JF2018]/[JF2015] -- split-concept resolution.} See also \textbf{Supplemental Information SI4}. The seven overlapping articulations of the alignment displayed Fig.~\ref{fig:align2} are resolved into their constituent split regions. That is, if regions A and B overlap, the three resulting split regions are labeled A\textbackslash b ("A, \emph{not} b"), A*B ("A \emph{and} B"), and B\textbackslash a ("B, \emph{not} a"). Five split-concept regions can \emph{only} be named using this convention, and are salmon-colored in the alignment visualization.}
-	\label{fig:align3}
-\end{figure}
+%DIFDELCMD < \begin{figure}[h]
+%DIFDELCMD < 	\centering
+%DIFDELCMD < 	\includegraphics[width=\textwidth]{figure34.png}
+%DIFDELCMD < 	%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\textbf{\DIFdelFL{Intensional RCC--5 alignment of the phylogenies of }\textit{\DIFdelFL{Minyomerus}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{/}%DIFDELCMD < [%%%
+\DIFdelFL{JF2015}%DIFDELCMD < ] %%%
+\DIFdelFL{-- split-concept resolution.}} %DIFAUXCMD
+\DIFdelFL{See also }\textbf{\DIFdelFL{Supplemental Information SI4}}%DIFAUXCMD
+\DIFdelFL{. The seven overlapping articulations of the alignment displayed Fig.~\ref{fig:align2} are resolved into their constituent split regions. That is, if regions A and B overlap, the three resulting split regions are labeled A\textbackslash b ("A, }\emph{\DIFdelFL{not}} %DIFAUXCMD
+\DIFdelFL{b"), A*B ("A }\emph{\DIFdelFL{and}} %DIFAUXCMD
+\DIFdelFL{B"), and B\textbackslash a ("B, }\emph{\DIFdelFL{not}} %DIFAUXCMD
+\DIFdelFL{a"). Five split-concept regions can }\emph{\DIFdelFL{only}} %DIFAUXCMD
+\DIFdelFL{be named using this convention, and are salmon-colored in the alignment visualization.}}
+	%DIFAUXCMD
+%DIFDELCMD < \label{fig:align3}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < 
 
-%distribution maps
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{figure35.png}
-	\caption{\textbf{Summary map of distributions of new species of \textit{Minyomerus} [JF2018].} Combined occurrence record and Maxent habitat modeling map for four newly-described species of \textit{Minyomerus} [JF2018], as indicated in the legend.}
-	\label{fig:map_summary}
-\end{figure}
+%DIFDELCMD < %%%
+%DIF < distribution maps
+%DIFDELCMD < \begin{figure}[h]
+%DIFDELCMD < 	\centering
+%DIFDELCMD < 	\includegraphics[width=\textwidth]{figure35.png}
+%DIFDELCMD < 	%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\textbf{\DIFdelFL{Summary map of distributions of new species of }\textit{\DIFdelFL{Minyomerus}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{.}} %DIFAUXCMD
+\DIFdelFL{Combined occurrence record and Maxent habitat modeling map for four newly-described species of }\textit{\DIFdelFL{Minyomerus}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{, as indicated in the legend.}}
+	%DIFAUXCMD
+%DIFDELCMD < \label{fig:map_summary}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < 
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{figure36.png}
-	\caption{\textbf{Distributions of \textit{M. ampullaceus} [JF2018] and \textit{M. tylotos} [JF2018].} Combined occurrence record and Maxent habitat modeling map for \textit{M. ampullaceus} [JF2018] and \textit{M. tylotos} [JF2018], as indicated in the legend.}
-	\label{fig:map_amptyl}
-\end{figure}
+%DIFDELCMD < \begin{figure}[h]
+%DIFDELCMD < 	\centering
+%DIFDELCMD < 	\includegraphics[width=\textwidth]{figure36.png}
+%DIFDELCMD < 	%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\textbf{\DIFdelFL{Distributions of }\textit{\DIFdelFL{M. ampullaceus}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ] %%%
+\DIFdelFL{and }\textit{\DIFdelFL{M. tylotos}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{.}} %DIFAUXCMD
+\DIFdelFL{Combined occurrence record and Maxent habitat modeling map for }\textit{\DIFdelFL{M. ampullaceus}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ] %%%
+\DIFdelFL{and }\textit{\DIFdelFL{M. tylotos}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{, as indicated in the legend.}}
+	%DIFAUXCMD
+%DIFDELCMD < \label{fig:map_amptyl}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < 
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\textwidth]{figure37.png}
-	\caption{\textbf{Distributions of \textit{M. franko} [JF2018].} Combined occurrence record and Maxent habitat modeling map for \textit{M. franko} [JF2018], as indicated in the legend.}
-	\label{fig:map_franko}
-\end{figure}
+%DIFDELCMD < \begin{figure}[h]
+%DIFDELCMD < 	\centering
+%DIFDELCMD < 	\includegraphics[width=\textwidth]{figure37.png}
+%DIFDELCMD < 	%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\textbf{\DIFdelFL{Distributions of }\textit{\DIFdelFL{M. franko}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{.}} %DIFAUXCMD
+\DIFdelFL{Combined occurrence record and Maxent habitat modeling map for }\textit{\DIFdelFL{M. franko}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{, as indicated in the legend.}}
+	%DIFAUXCMD
+%DIFDELCMD < \label{fig:map_franko}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < 
 
-\begin{figure}[h]
-	\centering
-	\begin{sideways}
-		\includegraphics[height=0.85\textwidth]{figure38.png}
-		\end{sideways}
-	\caption{\textbf{Distributions of \textit{M. sculptilis} [JF2018].} Combined occurrence record and Maxent habitat modeling map for \textit{M. sculptilis} [JF2018], as indicated in the legend.}
-	\label{fig:map_sculptilis}
-\end{figure}
+%DIFDELCMD < \begin{figure}[h]
+%DIFDELCMD < 	\centering
+%DIFDELCMD < 	\begin{sideways}
+%DIFDELCMD < 		\includegraphics[height=0.85\textwidth]{figure38.png}
+%DIFDELCMD < 		\end{sideways}
+%DIFDELCMD < 	%%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\textbf{\DIFdelFL{Distributions of }\textit{\DIFdelFL{M. sculptilis}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{.}} %DIFAUXCMD
+\DIFdelFL{Combined occurrence record and Maxent habitat modeling map for }\textit{\DIFdelFL{M. sculptilis}} %DIFAUXCMD
+%DIFDELCMD < [%%%
+\DIFdelFL{JF2018}%DIFDELCMD < ]%%%
+\DIFdelFL{, as indicated in the legend.}}
+	%DIFAUXCMD
+%DIFDELCMD < \label{fig:map_sculptilis}
+%DIFDELCMD < %%%
+\DIFdelendFL \end{figure}
 \end{document}

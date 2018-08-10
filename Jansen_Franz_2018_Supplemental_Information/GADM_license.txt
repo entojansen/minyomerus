@@ -1,0 +1,6 @@
+https://gadm.org/license.html
+
+GADM license
+The data are freely available for academic use and other non-commercial use.
+Redistribution, or commercial use, is not allowed without prior permission.
+Using the data to create maps for academic publishing is allowed.

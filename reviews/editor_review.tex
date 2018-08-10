@@ -1,0 +1,62 @@
+\documentclass[10pt,letterpaper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{calc}
+\newcommand{\x}{$\times$~}
+
+\makeatletter
+\newcommand{\DESCRIPTION@original@item}{}
+\let\DESCRIPTION@original@item\item
+\newcommand*{\DESCRIPTION@envir}{DESCRIPTION}
+\newlength{\DESCRIPTION@totalleftmargin}
+\newlength{\DESCRIPTION@linewidth}
+\newcommand{\DESCRIPTION@makelabel}[1]{\llap{#1}}%
+\newcommand{\DESCRIPTION@item}[1][]{%
+  \setlength{\@totalleftmargin}%
+       {\DESCRIPTION@totalleftmargin+\widthof{\textbf{#1 }}-\leftmargin}%
+  \setlength{\linewidth}
+       {\DESCRIPTION@linewidth-\widthof{\textbf{#1 }}+\leftmargin}%
+  \par\parshape \@ne \@totalleftmargin \linewidth
+  \DESCRIPTION@original@item[\textbf{#1}]%
+}
+\newenvironment{DESCRIPTION}
+  {\list{}{\setlength{\labelwidth}{0cm}%
+           \let\makelabel\DESCRIPTION@makelabel}%
+   \setlength{\DESCRIPTION@totalleftmargin}{\@totalleftmargin}%
+   \setlength{\DESCRIPTION@linewidth}{\linewidth}%
+   \renewcommand{\item}{\ifx\@currenvir\DESCRIPTION@envir
+                           \expandafter\DESCRIPTION@item
+                        \else
+                           \expandafter\DESCRIPTION@original@item
+                        \fi}}
+  {\endlist}
+\makeatother
+
+\address{M. Andrew Jansen\\School of Life Sciences\\Arizona State University\\Tempe, AZ 85287-4501} 
+\signature{\underline{Contact Information}\\email: majanse1@asu.edu\\office: 1-(480)-727-9692} 
+\begin{document} 
+\begin{letter}{Juan J. Morrone\\Universidad Nacional Aut\'{o}noma de M\'{e}xico\\Academic Editor, PeerJ} 
+	\opening{Dear Dr. Morrone,} 
+
+	In response to your review of the manuscript, we have made the following changes and addressed all of the points brought up in your comments.
+
+	\begin{enumerate}
+		\item \textbf{Figure/Table Citation} -- We have rearranged and re-numbered the figures, both in-text and within the file names, as necessary, to reflect their citation order in the manuscript.
+		\item \textbf{References} -- We have removed all instances of \textit{et al.} from the references section and added full author lists.
+		\item \textbf{Tables} -- The only table is found in-text, within the latex source code; we added a note to the staff indicating the lines of code where the table may be found.
+		\item \textbf{Figure Source Credit} -- All of the photographs were taken by the first author, so we have added a photo credit for Andrew Jansen to all of the pictures. 
+		\item \textbf{Figure Permissions} -- The maps were taken from https://gadm.org/, which are freely available for use in research and academic publishing, as indicated in their license at https://gadm.org/license.html; we have copied the text of this page, as well as the web address, and placed both in a text file uploaded to the supplementary information of this work.
+		\item \textbf{Supplemental File legend} -- We have added brief descriptive legends to each supplementary file.
+		\item \textbf{Funding Statement} -- We have removed the funding statement; this information is now provided in the author declarations.
+	\end{enumerate}
+
+	Please let us know if these revisions are acceptable.
+	Many thanks again for your time and effort to improve this manuscript.
+
+	\closing{Sincerely,\\Andrew Jansen \& Nico Franz}
+	\cc{Nico M. Franz}
+	%\ps{adding a postscript}
+\end{letter} 
+\end{document}
